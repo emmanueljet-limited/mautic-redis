@@ -50,10 +50,8 @@ services:
       DOCKER_MAUTIC_LOAD_TEST_DATA: 'false'
     healthcheck:
       test:
-        - CMD
-        - curl
-        - '-f'
-        - 'http://localhost'
+        - CMD-SHELL
+        - 'curl -f http://localhost/favicon.ico || exit 1'
       interval: 15s
       timeout: 10s
       retries: 15
