@@ -1,11 +1,11 @@
 x-mautic-common: &mautic-common
   image: 'ghcr.io/emmanueljet-limited/mautic-redis:latest'
   volumes:
+    - mautic_data_media_images:/var/www/html/docroot/media/images:z
+    - mautic_data_media_files:/var/www/html/docroot/media/files:z
+    - mautic_data_plugins:/var/www/html/docroot/plugins:z
     - mautic_data_config:/var/www/html/config:z
     - mautic_data_logs:/var/www/html/var/logs:z
-    - mautic_data_media_files:/var/www/html/docroot/media/files:z
-    - mautic_data_media_images:/var/www/html/docroot/media/images:z
-    - mautic_data_plugins:/var/www/html/docroot/plugins:z
     - mautic_data_cron:/opt/mautic/cron:z
 
 x-env-common: &env-common
@@ -89,7 +89,6 @@ services:
 
 volumes:
   redis_data:
-  mautic_data_bin:
   mautic_data_logs:
   mautic_data_cron:
   mautic_data_config:

@@ -1,24 +1,24 @@
-# 1. Version Control
+# Version Control
 .git/
 .github/
 .gitignore
 
-# 2. IDE and Editor Files
+# IDE and Editor Files
 .vscode/
 .idea/
 *.swp
 *.swo
 .DS_Store
 
-# 3. Local Infrastructure Files
+# Local Infrastructure Files
 docker-compose.yml
 docker-compose.*.yml
 .dockerignore
 
-# 4. Documentation
+# Documentation
 README.md
 LICENSE
 
-# 5. Local Environment Variables
+# Local Environment Variables
 .env
 .env.*

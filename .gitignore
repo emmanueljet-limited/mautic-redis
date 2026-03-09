@@ -1,0 +1,10 @@
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Local Environment Variables
+.env
+.env.*
